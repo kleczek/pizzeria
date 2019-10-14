@@ -17,7 +17,7 @@ html{
 	--main-white: #fff;
 	--main-font-dark-gray:#4d4d4d;
 	--main-footer-bg-color:#141414;
-	--main-footer-family:'Cheddar Jack', cursive;
+	--main-font-family:'Meddon', cursive;
 }
  
 section{
@@ -46,13 +46,76 @@ header{
 	height: 100vh;
 	background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent), url('images/hero.jpg') bottom no-repeat;
 	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	position: relative;
 }	
+
 /*start header - nav toggle*/
 /*end header - nav toggle*/
 /*start header - nav*/
 /*end header - nav*/
 /*start header - main text*/
 /*end header - main text*/
+.main-text{
+	line-height: 0;
+	margin: auto;
+	color: var(--main-white);
+	user-select: none;
+}
+
+.main-text h1{
+	font-family: var(--main-font-family);
+	color: var(--main-font-color);
+	font-size: 5rem;
+	font-weight: 100;
+	margin-bottom: 5rem;
+}
+
+.main-text h2{
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin-right: -5px;
+	font-size: 2rem;
+	line-height: 1;
+	position: relative;
+}
+
+.main-text h2::before,
+.main-text h2::after{
+	content: '';
+	width: 4rem;
+	height: 3px;
+	top: 50%;
+	transform: translateY(-50%);
+	position: absolute;
+	background-color: var(--main-white);
+	border-radius: 8px;
+}
+
+.main-text h2::before{
+	right: -2rem;
+}
+
+.main-text h2::after{
+	left: -2rem;
+}
+
+.main-btn{
+	font-size: 1.5rem;
+	border:2px solid var(--main-font-color);
+	padding: 2rem 2.5rem;
+	letter-spacing: 3px;
+	margin-right: -3px;
+	position: relative;
+	margin-top:3rem;
+}
+
+.main-btn:hover{
+	transform: translateY(-3px);
+	
+}
 /*end header*/
 
 
