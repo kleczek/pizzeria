@@ -1,0 +1,75 @@
+/*start global styles*/
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 10px;
+	font-family: 'Roboto', sans-serif;
+}
+
+:root{
+	--main-font-color: #f2b632;
+	--main-white: #fff;
+	--main-font-dark-gray:#4d4d4d;
+	--main-footer-bg-color:#141414;
+	--main-footer-family:'Cheddar Jack', cursive;
+}
+ 
+section{
+	padding: 6rem 0;
+}
+
+p{
+	line-height: 1.5;
+	font-size: 1.8rem;
+	font-weight: 300;
+	color: var(--main-font-dark-gray);
+}
+
+a{
+	text-decoration: none;
+	color: var(--main-white);
+}
+/*end global styles*/
+
+/*start reusable classes*/
+/*end reusable classes*/
+
+/*start header*/
+header{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent), url('images/hero.jpg') bottom no-repeat;
+	background-size: cover;
+}	
+/*start header - nav toggle*/
+/*end header - nav toggle*/
+/*start header - nav*/
+/*end header - nav*/
+/*start header - main text*/
+/*end header - main text*/
+/*end header*/
+
+
+/*start our story*/
+/*end our story*/
+
+/*start fresh ingridients*/
+/*end fresh ingridients*/
+
+/*start our menu*/
+/*end our menu*/
+
+/*start pizza goodness*/
+/*end pizza goodness*/
+
+/*start contact*/
+/*end contact*/
+
+/*start footer*/
+/*end footer*/
