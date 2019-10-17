@@ -4,3 +4,8 @@ $('.menu') .on('click', function(){
 	//doesn't work end
 	&('.overlay').toggleClass('menu-open');
 });
+
+$('.nav a').on('click', function(){
+	$('.menu').removeClass('active');
+	$('.overlay').removeClass('menu-open');
+})
