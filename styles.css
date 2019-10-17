@@ -85,6 +85,7 @@ a{
 
 .between-sec{
 	padding: 20rem 0;
+	text-align: center;
 }
 
 .between-sec-color{
@@ -104,35 +105,14 @@ header{
 	position: relative;
 }	
 
-/*start header - nav toggle*/
-/*wersja inna
-
-.menu{
-	padding: 2rem 2.5rem;
+.background-menu{
+	background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+	height: 10vh;
 	position: fixed;
-	top: 3rem;
-	right: 3rem;
-	background-color: rgba(0,0,0,0.5);
-	z-index: 999;
-	border-radius: 3px;
-	cursor: pointer;
 }
 
-.menu .bar,
-.menu .bar::before,
-.menu .bar::after{
-	content: '';
-	position: absolute;
-	height: 2px;
-	width: 4rem;
-	background-color: var(--main-white);
-	top: 0;
-	
-}
+/*start header - nav toggle*/
 
-wersja inna*/
-
-/*wersja od juliaFIX IT!!!!!!!!!!!!!!! */
 .menu{
     padding: 2rem 2.5rem;
     position: fixed;
@@ -178,7 +158,38 @@ wersja inna*/
 .menu .bar::after{
     top: 1rem;
 }
-/*wersja od julia FIX IT!!!!!!!!!!!!!!!*/
+
+.active .bar{
+	background-color: transparent;
+}
+
+.active .bar::before{
+	transform: rotate(45deg);
+}
+
+.active .bar::after{
+	transform: rotate(-45deg);
+}
+
+.active .bar::before,
+.active .bar::after{
+	top: 0;
+}
+/*end header - nav toggle*/
+/*start header - nav*/
+#logo{
+	display: none;
+	font-size: 2rem;
+	font-weight: 300;
+	border-bottom:-5px;
+	font-weight: 800;
+}
+
+#logo span{
+	font-family: var(--main-font-family);
+	color: var(--main-font-color);
+	font-weight: 100;
+}
 .nav{
 	width: 100%;
 	height: 6rem;
@@ -199,7 +210,7 @@ transform: scale(0);
 opacity: 0;
 }
 
-.overlay .menu-open{
+.overlay.menu-open{
 	transform: scale(1);
 	opacity: 1;
 }
@@ -229,12 +240,9 @@ opacity: 0;
 	border-bottom-color: var(--main-font-color);
 }
 
-
-/*end header - nav toggle*/
-/*start header - nav*/
 /*end header - nav*/
 /*start header - main text*/
-/*end header - main text*/
+
 .main-text{
 	line-height: 0;
 	margin: auto;
@@ -298,6 +306,7 @@ opacity: 0;
 	transform: translateY(0);
 	box-shadow: none;
 }
+/*end header - main text*/
 /*end header*/
 
 
@@ -332,13 +341,13 @@ opacity: 0;
 }
 /*end our menu*/
 
-/*start pizza goodness*/
-.pizza-goodness{
+/*start pizza original*/
+.pizza-original{
 	width: 100%;
 	background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/between2.jpg") center no-repeat;
 	background-size: cover;
 }
-/*end pizza goodness*/
+/*end pizza original*/
 
 /*start contact*/
 .contact-us form{
@@ -398,4 +407,89 @@ footer h4{
 	font-weight: 100;
 	font-family: 'Fjalla One', sans-serif;
 }
+
+footer p{
+	color: #fff;
+}
 /*end footer*/
+/*start media queries*/
+@media screen and (min-width: 769px){
+	header,
+	.between-sec{
+		background-attachment: fixed;
+	}
+
+	.menu{
+		display: none;
+	}
+
+	#logo{
+		display: block;
+	}
+	.nav{
+		display: flex;
+		padding: 2rem 10rem 0;
+		justify-content:space-between;
+	}
+
+	.nav .overlay{
+		position: initial;
+		background:none;
+		opacity: initial;
+		transform: initial;
+	}
+	.nav .overlay ul{
+		flex-direction: row;
+		list-style: none;
+		margin-top: 2px;
+	}
+
+	.nav .overlay ul li a{
+		font-size: 1.5rem;
+		letter-spacing: 1px;
+		margin-right: -1px;
+		padding: 0 2rem;
+	}
+
+	.main-text{
+	margin-right: 15rem;
+	align-items: right;
+	}
+	.scale {
+	transform: scale(1.2);
+	}
+
+	.container{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.center{
+		flex:1;
+	}
+	.add-flex{
+		flex:1;
+	}
+
+	.add-padding-right{
+		padding-right: 10rem;
+
+	}
+	.first{
+		order: 1;
+	}
+
+	.second{
+		order: 2;
+	}
+
+	.store{
+		min-height: 40rem;
+	}
+
+	.btn-info{
+		font-size:1.8rem;
+	}
+}
+
+/*end media queries*/
