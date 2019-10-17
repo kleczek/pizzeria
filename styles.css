@@ -44,6 +44,51 @@ a{
 	border-radius: 3px;
 	text-transform: uppercase;
 }
+
+.btn-info{
+	font-size: 1.2rem;
+	padding: 1rem;
+	color: var(--main-font-color);
+	border-bottom:2px solid var(--main-font-color);
+	margin:2rem 0 4rem 0;
+}
+
+.btn-info:hover{
+	background-color: var(--main-font-color);
+	color: var(--main-white);
+}
+.custom-font{
+	font-family: var(--main-font-family);
+	color: var(--main-font-color);
+	font-size: 4.5rem;
+	line-height: 1;
+	font-weight: 100;
+	margin-bottom: 1.5rem;
+}
+
+.custom-font-secondary{
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin-right: -5px;
+	font-size: 2.5rem;
+	line-height: 0.2;
+	color: var(--main-font-dark-gray);
+	margin-bottom: 5rem;
+}
+
+.container{
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.between-sec{
+	padding: 20rem 0;
+}
+
+.between-sec-color{
+	color: var(--main-white);
+}
 /*end reusable classes*/
 
 /*start header*/
@@ -59,7 +104,34 @@ header{
 }	
 
 /*start header - nav toggle*/
-/*FIX IT!!!!!!!!!!!!!!!*/
+/*wersja inna
+
+.menu{
+	padding: 2rem 2.5rem;
+	position: fixed;
+	top: 3rem;
+	right: 3rem;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 999;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.menu .bar,
+.menu .bar::before,
+.menu .bar::after{
+	content: '';
+	position: absolute;
+	height: 2px;
+	width: 4rem;
+	background-color: var(--main-white);
+	top: 0;
+	
+}
+
+wersja inna*/
+
+/*wersja od juliaFIX IT!!!!!!!!!!!!!!! */
 .menu{
     padding: 2rem 2.5rem;
     position: fixed;
@@ -105,7 +177,7 @@ header{
 .menu .bar::after{
     top: 1rem;
 }
-/*FIX IT!!!!!!!!!!!!!!!*/
+/*wersja od julia FIX IT!!!!!!!!!!!!!!!*/
 .nav{
 	width: 100%;
 	height: 6rem;
@@ -121,7 +193,9 @@ left: 0;
 top: 0;
 bottom: 0;
 z-index: 1;
-transition: all 650ms;
+transition: opacity 650ms;
+transform: scale(0);
+opacity: 0;
 }
 
 .overlay .menu-open{
@@ -146,7 +220,6 @@ transition: all 650ms;
 	display: block;
 	font-size: 2rem;
 	transition: all 650ms;
-	transform: uppercase;
 }
 
 .nav .overlay ul li a:hover,
@@ -228,9 +301,20 @@ transition: all 650ms;
 
 
 /*start our story*/
+.store{
+	width: 100%;
+	min-height: 30rem;
+	background: url("images/store.jpg") center no-repeat;
+	background-size: cover;
+}
 /*end our story*/
 
 /*start fresh ingridients*/
+.fresh-ingridients{
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/between.jpg") center no-repeat;
+	background-size: cover;
+}
 /*end fresh ingridients*/
 
 /*start our menu*/
