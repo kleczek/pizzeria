@@ -451,13 +451,11 @@ footer p{
 		padding: 0 2rem;
 	}
 
-	.main-text{
-	margin-right: 15rem;
-	align-items: right;
-	}
+/* WErsja 2
 	.scale {
 	transform: scale(1.2);
 	}
+*/
 
 	.container{
 		display: flex;
@@ -490,6 +488,94 @@ footer p{
 	.btn-info{
 		font-size:1.8rem;
 	}
+
+	.main-text{
+	margin-right: 15rem;
+	align-items: right;
+	overflow: hidden;
+	}
+
+	.animation{
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: repeat;
+  background-size: 80%;
+  animation: animate 7s linear forwards;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+	}
+
+	.main-text .main-btn{
+		opacity: 0;
+		animation: 1s fade 1s forwards;
+	}
+
+	@keyframes animate {
+  0% {
+    background-position: -1500%;
+  }
+  100% {
+    background-position: 1500%;
+  }
+}
+
+	@keyframes fade{
+		0%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 1;
+		}
+	}
+
+	/* OTHER ANIMATION
+
+	.main-text h1{
+		transform: translateX(4rem);
+		opacity: 0;
+		animation: 0.5s fadeUp 0.5s forwards;
+	}
+	.main-text h2{
+		transform: scale(2);
+		opacity: 0;
+		animation: fadeIn 0.5s forwards;
+	}
+
+	.main-text .main-btn{
+		opacity: 0;
+		animation: 0.5s fade 1s forwards;
+	}
+	@keyframes fadeIn{
+		0%{
+			transform: scale(1.5);
+			opacity: 0;
+		}
+		100%{
+			transform: scale(1);
+			opacity: 1;
+		}
+	}
+	@keyframes fadeUp{
+		0%{
+			transform: translateY(4rem);
+			opacity: 0;
+		}
+		100%{
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+		@keyframes fade{
+		0%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 1;
+		}
+	}
+	*/
+
 }
 
 /*end media queries*/
