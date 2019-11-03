@@ -331,13 +331,14 @@ opacity: 0;
 /*start our menu*/
 .image-group{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 10px;
-}
+  	grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  	grid-gap: 1rem;
+  }
 
 .image-group img{
-	width: 100%;
-	height: 30rem;
+	max-width: 45rem;
+  	margin: 0 auto;
+  	padding: 0 1rem;
 }
 /*end our menu*/
 
@@ -354,6 +355,7 @@ opacity: 0;
 	width: 100%;
 	min-width: 9rem;
 	margin-top:5rem;
+	grid-template-columns: 
 }
 
 .input,
@@ -495,20 +497,34 @@ footer p{
 	overflow: hidden;
 	}
 
+	.main-text h1{
+		background: linear-gradient(to right, #e72a3a 10%, #fff 50%, #5bdaff 60%);
+		background-size: auto auto;
+		background-clip: border-box;
+		background-size: 200% auto;
+		color: #fff;
+		background-clip: text;
+		text-fill-color: transparent;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: textclip 1.5s linear ;
+		display: inline-block;
+	}
+
 	.animation{
-  overflow: hidden;
-  background: linear-gradient(90deg, #000, #fff, #000);
-  background-repeat: repeat;
-  background-size: 80%;
-  animation: animate 7s linear forwards;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+ 
 	}
 
 	.main-text .main-btn{
 		opacity: 0;
 		animation: 1s fade 1s forwards;
 	}
+
+	@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
 
 	@keyframes animate {
   0% {
